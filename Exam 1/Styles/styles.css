@@ -1,0 +1,212 @@
+/************************** General Tag Styles **************************/
+body{
+    background-image: url("../Images/Pizza-Background.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-color: black;
+}
+
+h1, h4{
+    font-family: 'pantagruelregular';    
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/************************** Navigation **************************/
+.navbar{
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+    padding: 5px 40px;   
+}
+
+.nav-link{
+    color: black !important;
+}
+
+.nav-link:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.active .nav-link{
+    color: red !important;
+}
+
+/************************** Page **************************/
+.page{
+    width: 90%;
+    margin: auto;
+    margin-top: 6vw;
+    padding: 2%;
+}
+
+.page-info{
+    min-height: 40vw;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fafafa;
+    color: white;
+    border: double thin black;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8), -4px 0px 8px rgba(0, 0, 0, 0.8);
+}
+
+.page-info h1{
+    color: red;
+    font-size: 4em;
+    text-shadow: -1px 1px yellow;
+}
+.page-info h4{
+    color: red;
+    font-size: 1.8em;
+    text-shadow: -2px 2px black;
+}
+
+.card-title{
+    margin-bottom: 0;
+    padding: 20px;
+    background-color: #005e00;
+}
+
+/************************** Form **************************/
+form{
+    background-color: #fafafa;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 90px 50px;
+    min-height: 400px;
+    text-align: center; 
+    color: black;   
+}
+
+form .btn{
+    background-color: red;
+}
+
+form .btn:hover{
+    background-color: darkred;
+}
+
+form .btn:focus{
+    background-color: #ffff00 !important;
+    color: black;
+}
+
+input[type="text"]
+{
+    height:30px;
+    width:100%;
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    padding: 0 10px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #8a8a8a;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+select{
+    font-size: 15px;
+    line-height: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color:  #8a8a8a;
+    color: #fafafa;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+select:hover,
+input[type="text"]:hover{
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: #004e14;
+    color: #fafafa;
+}
+
+select:focus,
+input[type="text"]:focus{
+    border: 2px solid;
+    background-color: #fafafa;
+    color: black;
+    box-shadow: none;
+}
+
+textarea{
+    font-size: 15px;
+    line-height: 19px;
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color:  green;
+    color: #fafafa;
+    box-sizing: border-box;
+    border-radius: 2px;
+    resize: none;
+}
+
+::placeholder{
+    color: #fafafa;
+}
+
+/************************** Order Summary **************************/
+#orderReceipt{
+    width: 80%;
+    margin: auto;
+    padding: 20px; 
+    color: black;
+}
+
+#orderTitle{
+    text-decoration: underline;
+}
+
+/************************** Footer **************************/
+.page-footer{
+    background-color: yellow;
+    margin-top: 3vw;
+    overflow: hidden;
+    color: black;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-footer a,
+.page-footer h6,
+.page-footer li{
+    color: black;
+}
+
+.page-footer h6{
+    font-family: 'pantagruelregular';
+    font-size: 1.5em;    
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.page-footer a{
+    font-weight: bold;
+}
+
+.left h6,
+.left li{
+    text-align: right;
+}
+
+.center h6,
+.centerli{
+    text-align: center;
+}
+
+.right h6,
+.right li{
+    text-align: left;
+}

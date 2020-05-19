@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cheech's Pizza Order</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/stylesheet.css">
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="Images/Cheech.gif" width="80" height="80" alt="Cheech's Pizza">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#">Locations</a>
+                    </li>
+                    <li class="nav-item dropdown mr-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                        </a>
+                        <div class="dropdown-menu mr-4" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Pizzas</a>
+                            <a class="dropdown-item" href="#">Grinders</a>
+                            <a class="dropdown-item" href="#">Salads</a>
+                            <a class="dropdown-item" href="#">Desserts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active mr-4">
+                        <a class="nav-link" href="#">Order Online</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#">Join the Team</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page">
+        <div class="card page-info">
+            <div class="card-title">
+                <h1>Cheech's Pizza</h1>
+                <h4>Order Form</h4>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST" id="orderForm">                
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <span class="float-right">
+                                <div id="alertName"></div>
+                                <label class="float-left" for="name">Name:</label>
+                                <input type="text" name="name" id="name" placeholder="Name">
+                            </span>                        
+                        </div>
+                        <div class="col-md-6">
+                            <span class="float-left">
+                                <div id="alertPhone"></div>
+                                <label class="float-left" for="phoneNumber">Phone Number:</label>
+                                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(XXX)-XXX-XXXX">
+                            </span>                        
+                        </div>                   
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label for="quantity">Quantity:</label>
+                            <select name="quantity" id="quantity"></select>
+                            <label for="pizzaType">Pizza:</label>
+                            <select name="pizzaType" id="pizzaType"></select>
+                            <label for="pizzaPrice">Price:</label>
+                            <textarea name="pizzaPrice" id="pizzaPrice" rows="1" cols="6" disabled>$7.99</textarea>
+                        </div>
+                    </div>
+                    <input class="btn btn-dark btn-md mt-4" type="button" name="submit" value="Place Order"  id="orderBtn">
+                </form>
+            </div>
+            
+                        
+            <div id="orderReceipt">
+                <h4 id="orderTitle"></h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class=" float-right"  id="summaryInfo"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div  id="orderSummary"></div>
+                    </div>
+                </div>                
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <footer class="page-footer font-small">
+        <div class="footer-container">
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                <div class="col-md-3 mb-3 left">
+                    <h6>
+                        <a href="#">Locations</a>
+                    </h6>
+                    <ul>
+                        <li><a href="#">Springfield, MO</a></li>
+                        <li><a href="#">Branson, MO</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3 center">
+                    <h6>
+                        <a href="#">Menu</a>
+                    </h6>
+                    <ul>
+                        <li><a href="#">Pizzas</a></li>
+                        <li><a href="#">Grinders</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3 center">
+                    <h6>
+                        <a href="#">Online Orders</a>
+                    </h6>
+                    <ul>
+                        <li><a href="#">New Order</a></li>
+                        <li><a href="#">Current ORder</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3 right">
+                    <h6>
+                        <a href="#">Join the Team</a>
+                    </h6>
+                    <ul>
+                        <li><a href="#">Positions</a></li>
+                        <li><a href="#">Cheech Club</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">&copy; 2019 Copyright:
+          <a href="#"> Nick Schneider</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
