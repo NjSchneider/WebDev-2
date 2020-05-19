@@ -1,0 +1,42 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/***************************** Global Stylings*****************************/
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
+html,
+body{
+    background-color: #1d2024;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+#background{
+    background-color: white;
+    width: 98%;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active{
+    /* background-color: rgba(52, 58, 64, .1) !important;
+    outline-color: #1d2024 !important; */
+    text-decoration: underline;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+
+

@@ -1,0 +1,58 @@
+<div class="page-info"> 
+    <!-- Header Image -->  
+    <div class="row" id="show-header"  [ngStyle]="bgImg()">
+        <div class="col-md-12"></div>
+    </div> 
+    <!-- Overview Section -->  
+    <div class="row" id="show-release">
+        <div class="col-sm-12">
+            <h1 id="show-title">{{show.title}}</h1>
+            <h4 class="text-muted">
+                First air date: {{releaseDate}}
+            </h4>
+        </div>
+    </div>  
+    <div class="show-info">  
+        <h4 class="synopsis">Synopsis:</h4>        
+        <p class="show-overview">
+            {{show.overview}}
+        </p> 
+    </div>
+    <hr>
+    <div class="other-info">
+        <div class="row">
+            <div *ngIf="topBilled.length > 0 && reviews.length == 0 && trailers.length == 0" 
+                style="width: 65%; margin:auto; margin-bottom: 80px;">
+                <app-top-billed [topBilled]="topBilled"></app-top-billed>
+            </div> 
+            <div class="col-md-6 show-trailer" *ngIf="trailers.length > 0">
+                <!-- Media Section -->
+                <h3 id="trailer-heading">Media</h3>
+                <hr id="media-divider">
+                <div class="row">
+                    <!-- Trailers Frame -->
+                    <div class="col-lg-12">
+                        <div>
+                            <div class="float-right" id="player">
+                                <iframe width="800" height="400" [src]="videoUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="float-right" *ngIf="topBilled.length > 0 && reviews.length > 0 && trailers.length > 0">
+                    <app-top-billed [topBilled]="topBilled"></app-top-billed>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Reviews Section -->
+                <app-reviews [reviews]="reviews"></app-reviews>
+                <!-- Top Billed Cast Section -->
+                <div class="float-right" *ngIf="topBilled.length > 0 && reviews.length == 0 && trailers.length > 0">
+                    <app-top-billed [topBilled]="topBilled"></app-top-billed>
+                </div>
+            </div>
+        </div>
+        <!-- Recommended Shows Section -->
+        <app-recommended [showsRecommended]="recommendations" [title]="show.title"></app-recommended>    
+    </div>                      
+</div>

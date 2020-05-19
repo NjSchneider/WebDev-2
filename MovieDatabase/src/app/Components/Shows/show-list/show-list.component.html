@@ -1,0 +1,67 @@
+
+<div class="page-info">
+    <!-- Header Section -->
+    <div class="row page-header">
+        <div class="col-sm-6">
+            <h1 id="page-title">{{heading}}</h1>
+            <hr id="pageTitle-divider">
+        </div>
+        <div class="col-sm-6">
+            <div class="mr-auto">
+                <a class="btn genreFilters" role="button" id="dropdownMenuLink">
+                    Filter By Genre <i class="fas fa-caret-down"></i><i class="fas fa-caret-up"></i>
+                </a>                      
+                <app-genre-nav id="genreNav" [genres]="genres"
+                               (genre)="setGenre($event)" (filter)="genreFilter($event)">
+                </app-genre-nav>
+            </div>
+        </div>
+    </div>    
+    <div *ngIf="filtered.length == 0">
+        <h3 class="noResults">No results found...</h3>
+    </div>
+    <!-- Show-List Display Section -->
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let show of filtered | slice: startPoint:endPoint">
+            <div class="card mb-3" style="max-width: 800px">
+                <div class="row no gutters">
+                    <div class="col-md-4 card-image">
+                        <img class="show-image" src="{{show.image}}" alt="{{show.name}}">    
+                    </div>
+                    <div class="col-md-8 card-info">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="float-left score">
+                                            {{show.score}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="title">
+                                            <h4 class="show-title">{{show.title}}</h4>
+                                            <h6 class="text-muted" id="show-release">{{show.date}}</h6>
+                                        </div>                                    
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="card-text">
+                                {{show.overview}}
+                            </div> 
+                            <div class="card-footer">
+                                <button class="btn btn-light" (click)="onSelect(show)">More info</button>
+                            </div>                                                               
+                        </div>                                                                                  
+                    </div>                                                                    
+                </div>                        
+            </div>
+        </div>
+    </div>
+    <!-- Pagination Section -->
+    <app-pagination [filtered]="filtered" [startPoint]="startPoint" [endPoint]="endPoint"
+                    [currentIndex]="currentIndex"
+                    (updateStartPoint)="setStartPoint($event)"
+                    (updateEndPoint)="setEndPoint($event)"
+                    (updatePageIndex)="setCurrentIndex($event)">
+    </app-pagination>
+</div>

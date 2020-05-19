@@ -1,0 +1,285 @@
+/***************************** Page Header *****************************/
+#header{ 
+    width: 98%;
+    margin: auto;
+    min-height: 640px; 
+    max-height: 640px;
+    min-width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 100% auto !important;
+}
+
+/***************************** Page Info *****************************/
+.page-info{
+    width: 98%;
+    margin: auto;
+    background-color: white;
+    min-height: 100vh;
+}
+
+/************************* Poster *************************/
+.movie-poster{
+    width: 200px;
+    max-height: 270px;
+    position: absolute;
+    left: 12.5%;
+    top: 80%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .7);
+}
+
+/************************* Title & Release Date *************************/
+#title-release{
+    background-color: #343a40;
+    margin: auto;    
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .5), 0px -1px 2px rgba(0, 0, 0, .5);
+    margin-bottom: 40px;
+}
+
+#movie-title{
+    color: white;
+}
+
+h4{
+    text-align: center;
+}
+
+/************************* Movie-detail Info *************************/
+.movie-info{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    min-height: 160px;
+}
+
+#synopsis{
+    width: 60%;
+    margin: auto;
+    text-align: left;
+}
+
+.movie-overview{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+hr{
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+/************************* Trailer *************************/
+.movie-trailer{
+    margin-bottom: 80px !important;
+}
+
+.section-heading{
+    text-align: center;
+}
+
+#media-divider{
+    width: 8%;
+    background-color: #343a40;
+    margin: 0px auto 30px auto;
+    border: .75px solid rgba(52, 58, 64, .4);
+}
+
+#trailers{
+    margin-bottom: 80px;
+}
+
+#player{
+    width: 100%;
+    margin: auto;
+    max-height: 400px;
+}
+
+.carousel{
+    border-right: 2px solid #343a40;
+    border-left: 2px solid #343a40;
+    border-top: 2px solid #343a40;
+}
+
+.carousel-inner,
+.carousel-item{
+    max-width: 800px;
+    max-height: 400px;
+    padding-right: 0px;
+    margin-right: 0px !important;
+    background-color: black;    
+}
+
+.carousel-inner{
+    margin: 0 !important;    
+}
+
+iframe{
+    min-width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/*********************** Trailer Controls ***********************/
+#trailer-controls{
+    max-width: 800px; 
+    background-color: rgba(52, 58, 64, .4); 
+    margin: auto; 
+    border-top: 1.5px solid #343a40;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .2) 
+}
+
+#trailerTitle{
+    margin-top: 10px;
+    text-shadow: .75px .75px 1px rgba(52, 58, 64, .5);
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.45em;
+}
+
+.fa-chevron-left,
+.fa-chevron-right{
+    padding: 5px;
+    color: #6b7480;
+    background-color: #343a40;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover{
+    color: #00d382;    
+    cursor: pointer;    
+    box-shadow: -2px 0px 3px rgba(0, 0, 0, .5), 2px 2px 3px rgba(0, 0, 0, .5);
+}
+
+#carousel-prev{
+    margin-left: -14%;
+}
+
+#carousel-next{
+    margin-right: 4%;
+}
+
+/************************* Reviews *************************/
+.reviews{
+    margin-bottom: 80px;
+}
+
+#reviews-divider{
+    width: 12%;
+    background-color: #343a40;
+    margin: 0px auto 30px auto;
+    border: .75px solid rgba(52, 58, 64, .4);
+}
+
+.card{
+    max-width: 70%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .05);
+    margin-bottom: 10px;
+}
+
+.user{
+    padding-left: 10%;
+}
+
+.card-text{
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1.05em;
+}
+
+/********************************* Media Queries *********************************/
+@media only screen and (max-width: 500px){
+    #header{ 
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .movie-info{
+        width: 90%;
+    }
+
+    .movie-poster{
+        display: none;
+    }
+
+    #synopsis,
+    .movie-overview{
+        width: 100%;
+    }
+
+    /************************* Trailers *************************/
+    .movie-trailer{
+        margin-bottom: 40px !important;
+    }
+
+    #trailer-heading{
+        display: block;
+    }
+
+    #player{
+        width: 100%;
+        margin: auto;
+    }
+
+    iframe{
+        max-width: 100%;
+        max-height: 280px;
+    }
+
+    /*********************** Trailer Controls ***********************/
+    #trailerTitle{
+        margin-top: 0px;
+        text-shadow: .75px .75px 1px rgba(52, 58, 64, .5);
+        text-align: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.45em;
+        padding-left: 5px;
+    }
+
+    #trailer-controls .col-sm-2{
+        padding: 0px;
+        width: 7%;
+    }
+
+    #trailer-controls .col-sm-8{
+        width: 85.6%;
+        padding: 0px;
+    }
+
+    #carousel-prev{        
+        margin-left: -10%;
+    }
+
+    #carousel-next{
+        margin-right: 60%;
+    }
+    
+    /************************* Reviews *************************/
+    .card{
+        max-width: 90%;
+    }
+
+    .user{
+        padding-left: 5%;
+    }
+
+    .card-text{
+        width: 100%;
+    }
+
+}

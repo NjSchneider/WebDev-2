@@ -1,0 +1,85 @@
+
+<div class="page-info">   
+    <div class="row" id="header" [ngStyle]="bgImg()">
+        <div class="col-md-12"></div>
+    </div>     
+    <div class="row" id="title-release">
+        <div class="col-sm-12">
+            <img class="movie-poster" src="{{poster}}" alt="{{movie.title}}">
+            <h1 id="movie-title">{{movie.title}}</h1>
+            <h4 class="text-muted">
+                Released: {{releaseDate}}
+            </h4>
+        </div>
+    </div>
+    <div class="movie-info"> 
+        <h4 id="synopsis">Synopsis:</h4>       
+        <p class="movie-overview">
+            {{movie.overview}}
+        </p> 
+    </div>
+    <hr>
+    <div class="other-info">
+        <div class="row">
+            <div *ngIf="topBilled.length > 0 && reviews.length == 0 && trailers.length == 0" 
+                style="width: 65%; margin:auto; margin-bottom: 80px;">
+                <app-top-billed [topBilled]="topBilled"></app-top-billed>
+            </div> 
+            <div class="col-md-6 movie-trailer" *ngIf="trailers.length > 0">
+                <!-- Media Section -->
+                <h3 class="section-heading">Media</h3>
+                <hr id="media-divider">
+                <div class="row">
+                    <div class="col-lg-12" id="trailers">
+                        <!-- Trailers Frame -->
+                        <div id="carouselExampleControls" class="carousel slide float-right" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" *ngFor="let trailer of trailers | slice: startPoint:endPoint">
+                                    <div id="player">
+                                        <iframe width="800" height="400" [src]="trailer.key" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div> 
+                                </div>
+                            </div>
+                            <!-- Trailer Controls -->
+                            <div class="row" id="trailer-controls">
+                                <div class="col-sm-2">
+                                    <span class="float-left" id="carousel-prev" *ngIf="trailers.length > 1">
+                                        <a (click)="prevTrailer()" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-chevron-left fa-3x"></i></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>                                
+                                    </span>
+                                </div>
+                                <!-- Trailer Title -->
+                                <div class="col-sm-8">
+                                    <h3 class="text-muted" id="trailerTitle">{{trailers[slideIndex].name}}</h3>
+                                </div>
+                                <div class="col-sm-2">
+                                    <span class="float-right" id="carousel-next" *ngIf="trailers.length > 1">
+                                        <a (click)="nextTrailer(slideIndex + 1)" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-chevron-right fa-3x"></i></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>                                                          
+                        </div>    
+                    </div>
+                </div>  
+                <!-- Top Billed Cast Section -->
+                <div class="float-right" *ngIf="topBilled.length > 0 && reviews.length > 0 && trailers.length > 0">
+                    <app-top-billed [topBilled]="topBilled"></app-top-billed>
+                </div>    
+            </div>
+            <div class="col-md-6">
+                <!-- Reviews Section -->
+                <app-reviews [reviews]="reviews"></app-reviews>
+                <div class="float-right" *ngIf="topBilled.length > 0 && trailers.length > 0 && reviews.length == 0">
+                    <app-top-billed [topBilled]="topBilled"></app-top-billed>   
+                </div>                  
+            </div>
+        </div> 
+        <!-- Recommended Movies Section -->
+        <app-recommended [movieRecommended]="recommendations" [title]="movie.title"></app-recommended>       
+    </div>                   
+</div>
