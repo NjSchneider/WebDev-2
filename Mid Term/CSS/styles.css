@@ -1,0 +1,129 @@
+body{
+    overflow: hidden;
+    background-color: black;   
+    font-size: 1.5em; 
+}
+
+/***************************** Schwifty Racers Header *****************************/
+header{
+    background-color: white;
+    background-image: url("../Images/bg-portal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0px;    
+    font-family: 'get_schwiftyregular'; 
+    color: rgb(74, 157, 212);
+    text-shadow: 2px 2px 3px rgb(166, 255, 0);
+}
+
+#title{
+    float: left;
+    padding-left: 80px;
+}
+
+#title h1,
+#title h4{
+    opacity: .8;
+    text-align: center;
+    letter-spacing: .08em;
+}
+
+#instructions{
+    float: left;
+    font-size: .8em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    color: rgb(141, 141, 141);
+    opacity: .15;
+    transition: 1s;
+}
+
+#instructions:hover{
+    color: rgb(74, 157, 212);
+    opacity: .7;
+    transition: 1.5s;
+}
+
+#instructions h4{
+    text-align: center;
+}
+
+/***************************** Schwifty Racers Background *****************************/
+#land{
+    background-image: url("../Images/bg-landscape.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 82vh;
+    width: 100%;
+    margin: auto;
+    margin-top: 190px;
+    padding-top: 30px;
+}
+
+/***************************** Controls *****************************/
+#fart{
+    width: 200px;
+    position: fixed;
+    top: 100;
+}
+
+/***************************** Racers *****************************/
+.racer img{
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    visibility: visible;
+}
+
+#morty img{
+    height: 200px;
+}
+
+/***************************** Winner *****************************/
+#winner{
+    margin-top: 80px;
+}
+
+#winner img{
+    width: 250px;
+    max-height: 300px;
+    display: none;
+    margin: auto;    
+}
+
+#winnerTag{
+    font-family: 'get_schwiftyregular'; 
+    text-align: center;
+    color: rgb(74, 157, 212);
+    text-shadow: 3px 3px 5px black;
+    display: none;
+}
+
+/***************************** Portal Animation *****************************/
+#portal{
+    visibility: hidden;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    animation: rotation 6.5s infinite linear;
+    transition: 1s;
+}
+
+@keyframes rotation{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
