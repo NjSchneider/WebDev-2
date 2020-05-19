@@ -1,0 +1,58 @@
+body{
+    background-image: url("Images/bg.jpeg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+}
+
+#app{
+    background-color: white;
+    padding:40px 20px;
+}
+
+.card{
+    width: 72%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-color: rgba(37, 37, 37, .4);
+}
+
+.card-img-top{
+    max-width: 340px;
+    max-height: 300px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.card-header{
+    background-color: rgb(37, 37, 37);
+}
+
+.card-title{
+    color: white;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+button{
+    margin-left: 5px;
+}
+
+.btn-primary{
+    
+    display: block;
+    margin: auto;
+}
+
+.table{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
